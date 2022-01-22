@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SLIDER</title>
+		<style>
+            h1{
+                text-align: center;
+            }
+			         /* SLIDER */
+			li {
+				list-style: none;
+			}
+			.carrusel {
+				width: 90%;
+				max-width: 120em;
+				/* background-color: lightskyblue; */
+				/* margin: auto; */
+				padding: 2em;
+				overflow: hidden;
+				display: grid;
+				grid-template-columns: auto 1fr auto;
+			}
+			.carrusel .grande {
+				width: 200%;
+				/* background-color: orange; */
+
+				/* padding: 2em; */
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				overflow:hidden;
+
+				transition: all .5 ease;
+				transform: translate(0%);
+			}
+			.carrusel .img {
+				width: calc(100% / 2);
+				padding: 2em;
+				/* background-color: lime; */
+				min-height: 10vh;
+				overflow:hidden;
+				/* width: 530px; */
+			}
+			.carrusel .puntos {
+				width: 100%;
+				/* background-color: red; */
+				padding: 1em;
+
+				display: flex;
+				/* align-items: center; */
+				justify-content: center;
+				padding: .4em;
+				grid-column: 2/3;
+			}
+			.carrusel .punto {
+				width: 2em;
+				height: 2em;
+				border-radius: 2em;
+				background-color: blue;
+				margin: .2em;
+			}
+			.punto.activo{
+				background-color: orange;
+			}
+			.arrowLeft,.arrowRig{
+				/* justify-self: center; */
+				display: grid;
+				align-items: center;
+				z-index: 1;
+		</style>
+	</head>
+	<body>
+		<h1>SLIDER</h1>
+		<div class="carrusel">
+			<!-- TODO la ptmd -->
+			<div class="arrowLeft">
+				<svg
+					class="puntito"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+				>
+					<path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+				</svg>
+			</div>
+			<div class="grande">
+				<img src="02.jpg" alt="Imagen 1" class="img" />
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
+				<img src="03.jpg" alt="Imagen 2" class="img" />
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
+			</div>
+			<div class="arrowRig">
+				<svg
+					class="puntito"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+				>
+					<path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+				</svg>
+			</div>
+			<ul class="puntos">
+				<li class="punto activo"></li>
+				<li class="punto"></li>
+			</ul>
+		</div>
+		<script src="pepe.js"></script>
+	</body>
+</html>

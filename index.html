@@ -6,10 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SLIDER</title>
 		<style>
-            h1{
-                text-align: center;
-            }
-			         /* SLIDER */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			h1 {
+				text-align: center;
+			}
+			/* SLIDER */
 			li {
 				list-style: none;
 			}
@@ -31,9 +36,9 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				overflow:hidden;
+				overflow: hidden;
 
-				transition: all .5 ease;
+				transition: all 0.5 ease;
 				transform: translate(0%);
 			}
 			.carrusel .img {
@@ -41,7 +46,7 @@
 				padding: 2em;
 				/* background-color: lime; */
 				min-height: 10vh;
-				overflow:hidden;
+				overflow: hidden;
 				/* width: 530px; */
 			}
 			.carrusel .puntos {
@@ -52,7 +57,7 @@
 				display: flex;
 				/* align-items: center; */
 				justify-content: center;
-				padding: .4em;
+				padding: 0.4em;
 				grid-column: 2/3;
 			}
 			.carrusel .punto {
@@ -60,16 +65,18 @@
 				height: 2em;
 				border-radius: 2em;
 				background-color: blue;
-				margin: .2em;
+				margin: 0.2em;
 			}
-			.punto.activo{
+			.punto.activo {
 				background-color: orange;
 			}
-			.arrowLeft,.arrowRig{
+			.arrowLeft,
+			.arrowRig {
 				/* justify-self: center; */
 				display: grid;
 				align-items: center;
 				z-index: 1;
+			}
 		</style>
 	</head>
 	<body>
@@ -77,14 +84,7 @@
 		<div class="carrusel">
 			<!-- TODO la ptmd -->
 			<div class="arrowLeft">
-				<svg
-					class="puntito"
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
-				>
+				<svg class="puntito" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 					<path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
 				</svg>
 			</div>
@@ -95,14 +95,7 @@
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
 			</div>
 			<div class="arrowRig">
-				<svg
-					class="puntito"
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
-				>
+				<svg class="puntito" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 					<path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
 				</svg>
 			</div>
